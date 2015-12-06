@@ -11,6 +11,7 @@ class PhotosController < ApplicationController
 
   def create
     @photo = current_user.photos.new photo_params
+    #@photo = Photo.new photo_params
 
     if @photo.save
       redirect_to @photo, notice: "Upload Successful...for the grandmas!"
@@ -21,6 +22,6 @@ class PhotosController < ApplicationController
 
   private
     def photo_params
-      params.require(:photo).permit(:image, :user_id, :remove_image)
+      params.require(:photo).permit(:image, :user_id, :remove_image, :cached_image_data)
     end
 end

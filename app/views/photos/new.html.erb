@@ -1,5 +1,6 @@
 <%= form_for @photo, multipart: true do |f|%>
   <%= f.file_field :image %>
+  <%= f.hidden_field :cached_image_data %>
   <% if @photo.image_data? %>
     <%= image_tag @photo.image_url(:thumb) %>
     <div>

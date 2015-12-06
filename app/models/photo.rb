@@ -4,4 +4,5 @@ class Photo < ActiveRecord::Base
   include ImageUploader[:image]
 
   validates_presence_of :image
+  validates_presence_of :user_id
 end

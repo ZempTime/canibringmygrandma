@@ -32,7 +32,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       t.string :username, unique: true
       t.boolean :shadowbanned, default: "false"
-      t.string :type, default: "regular"
+      t.string :role, default: "regular"
 
       t.timestamps null: false
     end

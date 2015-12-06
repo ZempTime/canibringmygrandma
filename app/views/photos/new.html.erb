@@ -1,0 +1,11 @@
+<%= form_for @photo, multipart: true do |f|%>
+  <%= f.file_field :image %>
+  <% if @photo.image_data? %>
+    <%= image_tag @photo.image_url(:thumb) %>
+    <div>
+      Remove attachment: <%= f.check_box :remove_image %>
+    </div>
+  <% end %>
+
+  <%= f.submit "Find Out!", class: "btn btn-lg btn-block btn-info" %>
+<% end %>

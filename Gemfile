@@ -49,6 +49,11 @@ end
 gem 'bootstrap', '~> 4.0.0.alpha1'
 gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'font-awesome-rails', '~> 4.5'
+
 gem 'shrine', '~> 1.0'
+gem 'fastimage', '~> 1.8', '>= 1.8.1'
+gem 'mini_magick', '~> 4.3', '>= 4.3.6'
+gem 'image_processing', '~> 0.2.4'
+
 #gem 'administrate', '~> 0.1.1'
 #gem 'will_paginate', '~> 3.0', '>= 3.0.7'

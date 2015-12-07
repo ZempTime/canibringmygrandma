@@ -22,10 +22,14 @@ class PhotosController < ApplicationController
     @photo = current_user.photos.new photo_params
     #@photo = Photo.new photo_params
 
-    if @photo.save
-      redirect_to @photo, notice: "Upload Successful...for the grandmas!"
-    else
-      render :new, notice: "Problems with this upload"
+    respond_to do |format|
+      if @photo.save
+        format.html { redirect_to @photo, notice: "Upload Successful...for the grandmas!" }
+        format.js
+      else
+        format.html { render :new, notice: "Problems with this upload" }
+        format.js
+      end
     end
   end
 

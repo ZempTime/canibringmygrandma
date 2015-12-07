@@ -55,6 +55,8 @@ gem 'shrine', '~> 1.0'
 gem 'fastimage', '~> 1.8', '>= 1.8.1'
 gem 'mini_magick', '~> 4.3', '>= 4.3.6'
 gem 'image_processing', '~> 0.2.4'
+gem 'jquery-fileupload-rails', '~> 0.4.6'
 
 gem 'administrate', '~> 0.1.1'
 gem 'kaminari', '~> 0.16.3'
+gem 'roda', '~> 2.8'

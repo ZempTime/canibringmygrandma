@@ -1,7 +1,7 @@
 <div class="col-sm-6 col-sm-offset-3">
   <div class="light well">
     <h1 class="text-center">Can You Bring Your Grandma?</h1>
-      <%= form_for @photo, multipart: true do |f|%>
+      <%= form_for @photo, multipart: true, remote: true do |f|%>
         <div class="form-group">
           <%= f.label :image, "Upload a photo of a place you're not sure you can bring your grandma." %>
           <%= f.file_field :image, class: "form-control"%>
@@ -12,7 +12,9 @@
         <%= f.hidden_field :cached_image_data %>
 
         <% if @photo.image_data? %>
-          <%= image_tag @photo.image_url(:thumb) %>
+          <div id="image-preview">
+            <%= image_tag @photo.image_url(:thumb) %>
+          </div>
           <div>
             Remove attachment: <%= f.check_box :remove_image %>
           </div>
@@ -23,3 +25,12 @@
     </div>
   </div>
 </div>
+
+<script id="template-upload" type="text/x-tmpl">
+  <div class="upload">
+    <p>{%=o.name%}:</p>
+    <div id="progress" class="progress">
+      <div class="progress-bar progress-bar-success"></div>
+    </div>
+  </div>
+</script>

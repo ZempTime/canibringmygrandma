@@ -34,3 +34,30 @@
     </div>
   </div>
 </script>
+
+<script>
+  $(function() {
+    $('[type=file]').fileupload({
+      add: function(e, data) {
+        $.getJSON('/photos/images/cache/presign', function(result) {
+          data.formData = result['fields'];
+          data.url = result['url'];
+          data.submit();
+        });
+      },
+      done: function(e, data) {
+        var image = {
+          id: data.formData.key.match(/\w+$/)[0],
+          storage: 'cache',
+          metadata: {
+            size:      data.files[0].size,
+            filename:  data.files[0].name,
+            mime_type: data.files[0].type
+          }
+        }
+        $.ajax("/photos", {method: 'POST', data: {photo: {image: JSON.stringify(image)}}})
+          .done(function(data) { $("ul").append(data) })
+      }
+    });
+  });
+</script>

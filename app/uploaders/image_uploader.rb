@@ -3,13 +3,14 @@ class ImageUploader < Shrine
 
   plugin :activerecord
   plugin :determine_mime_type
+  plugin :store_dimensions
   plugin :logging, logger: Rails.logger
   plugin :remove_attachment
   plugin :store_dimensions
   plugin :validation_helpers
   plugin :versions, names: [:original, :thumb]
   plugin :cached_attachment_data
-  plugin :direct_upload
+  plugin :direct_upload, presign: true, max_size: 20*1024*1024
 
   Attacher.validate do
     validate_max_size 2.megabytes, message: 'is too large (max is 2 MB)'

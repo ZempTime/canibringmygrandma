@@ -1,7 +1,7 @@
 <div class="col-md-8 col-md-offset-2">
   <h1 class="text-center">Can You Bring Your Grandma?</h1>
   <div class="text-center">
-    <%= image_tag @photo.image_url(:original), class: "img-responsive" %>
+    <%= image_tag @photo.image_url(:original), class: "img-responsive", size: "300x300" %>
     <p class="text-center">Location: <%= @photo.location %></p>
   </div>
   <%= render @vote %>

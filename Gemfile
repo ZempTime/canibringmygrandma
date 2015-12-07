@@ -61,3 +61,8 @@ gem 'aws-sdk', '~> 2.2', '>= 2.2.4'
 gem 'administrate', '~> 0.1.1'
 gem 'kaminari', '~> 0.16.3'
 gem 'roda', '~> 2.8'
+
+gem 'capistrano', '~> 3.4'
+gem 'capistrano-bundler', '~> 1.1', '>= 1.1.4'
+gem 'capistrano-rails', '~> 1.1', '>= 1.1.5'
+gem 'capistrano-rbenv', github: "capistrano/rbenv"

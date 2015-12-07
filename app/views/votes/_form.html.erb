@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row" id="vote-form">
   <div class="col-md-3">
-    <%= form_for [@photo, @vote] do |f| %>
+    <%= form_for [@photo, @vote], remote: true do |f| %>
       <%= f.hidden_field :answer, value: "1" %>
       <%= f.submit "Yes", class: "btn btn-success btn-lg btn-block" %>
     <% end %>
@@ -10,9 +10,11 @@
   <div class="col-md-3">
   </div>
   <div class="col-md-3">
-    <%= form_for [@photo, @vote] do |f| %>
+    <%= form_for [@photo, @vote], remote: true do |f| %>
       <%= f.hidden_field :answer, value: "0" %>
       <%= f.submit "No", class: "btn btn-danger btn-lg btn-block" %>
     <% end %>
   </div>
+</div>
+<div id="vote-results" style="display: none;">
 </div>

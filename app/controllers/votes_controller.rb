@@ -3,7 +3,8 @@ class VotesController < ApplicationController
   before_action :set_photo
 
   def create
-    @vote = current_user.votes.new vote_params
+    @vote = Vote.new vote_params
+    @vote.user_id = current_user.id
     @vote.photo = @photo
 
     respond_to do |format|

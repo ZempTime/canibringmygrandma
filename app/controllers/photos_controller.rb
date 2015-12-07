@@ -1,6 +1,12 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!
 
+  def answer
+    @photo = current_user.unvoted_photo
+
+    redirect_to @photo if @photo
+  end
+
   def show
     @photo = Photo.find(params[:id])
     @photo.add_view!

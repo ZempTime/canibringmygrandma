@@ -6,11 +6,17 @@ class User < ActiveRecord::Base
 
   has_many :photos
   has_many :votes
-  has_many :voted_photos, through: :votes, class_name: "Photo", foreign_key: "photo_id", source: :vote
+  has_many :voted_photos, through: :votes, class_name: "Photo", foreign_key: "photo_id", source: :photo
 
   attr_accessor :login
 
   validates :username, :presence => true, :uniqueness => { :case_sensitive => false }
+
+  def unvoted_photo
+    valid_photos = Photo.where.not(user_id: User.where(shadowbanned: true).pluck(:id))
+
+    (valid_photos - voted_photos).sample
+  end
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup

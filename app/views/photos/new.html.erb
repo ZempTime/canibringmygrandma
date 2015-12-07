@@ -1,12 +1,25 @@
-<%= form_for @photo, multipart: true do |f|%>
-  <%= f.file_field :image %>
-  <%= f.hidden_field :cached_image_data %>
-  <% if @photo.image_data? %>
-    <%= image_tag @photo.image_url(:thumb) %>
-    <div>
-      Remove attachment: <%= f.check_box :remove_image %>
-    </div>
-  <% end %>
+<div class="col-sm-6 col-sm-offset-3">
+  <div class="light well">
+    <h1 class="text-center">Can You Bring Your Grandma?</h1>
+      <%= form_for @photo, multipart: true do |f|%>
+        <div class="form-group">
+          <%= f.label :image, "Upload a photo of a place you're not sure you can bring your grandma." %>
+          <%= f.file_field :image, class: "form-control"%>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :location, placeholder: "Where is this?", class: "form-control" %>
+        </div>
+        <%= f.hidden_field :cached_image_data %>
 
-  <%= f.submit "Find Out!", class: "btn btn-lg btn-block btn-info" %>
-<% end %>
+        <% if @photo.image_data? %>
+          <%= image_tag @photo.image_url(:thumb) %>
+          <div>
+            Remove attachment: <%= f.check_box :remove_image %>
+          </div>
+        <% end %>
+
+        <%= f.submit "Find Out!", class: "btn btn-lg btn-block btn-info" %>
+      <% end %>
+    </div>
+  </div>
+</div>

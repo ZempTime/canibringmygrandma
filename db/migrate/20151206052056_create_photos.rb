@@ -3,6 +3,7 @@ class CreatePhotos < ActiveRecord::Migration
     create_table :photos do |t|
       t.integer :user_id
       t.text :image_data
+      t.string :location
       t.integer :views, default: 0
 
       t.timestamps null: false

@@ -5,4 +5,5 @@ class Photo < ActiveRecord::Base
 
   validates_presence_of :image
   validates_presence_of :user_id
+  validates_presence_of :location
 end

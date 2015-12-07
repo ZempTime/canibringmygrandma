@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   validates :username, :presence => true, :uniqueness => { :case_sensitive => false }
 
   def unvoted_photo
-    valid_photos = Photo.where.not(user_id: User.where(shadowbanned: true).pluck(:id))
+    valid_photos = Photo.valid_photos
 
     (valid_photos - voted_photos).sample
   end

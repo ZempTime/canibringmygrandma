@@ -9,6 +9,10 @@ class Photo < ActiveRecord::Base
   validates_presence_of :user_id
   validates_presence_of :location
 
+  def self.valid_photos
+    Photo.where.not(user_id: User.where(shadowbanned: true).pluck(:id))
+  end
+
   def add_view!
     update(views: views + 1)
   end

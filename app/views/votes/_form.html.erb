@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-3">
     <%= form_for [@photo, @vote] do |f| %>
-      <%= f.hidden_field :answer, value: "true" %>
+      <%= f.hidden_field :answer, value: "1" %>
       <%= f.submit "Yes", class: "btn btn-success btn-lg btn-block" %>
     <% end %>
   </div>
@@ -11,7 +11,7 @@
   </div>
   <div class="col-md-3">
     <%= form_for [@photo, @vote] do |f| %>
-      <%= f.hidden_field :answer, value: "false" %>
+      <%= f.hidden_field :answer, value: "0" %>
       <%= f.submit "No", class: "btn btn-danger btn-lg btn-block" %>
     <% end %>
   </div>

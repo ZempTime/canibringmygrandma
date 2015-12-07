@@ -4,5 +4,5 @@
     <%= image_tag @photo.image_url(:original), class: "img-responsive" %>
     <p class="text-center">Location: <%= @photo.location %></p>
   </div>
+  <%= render @vote %>
 </div>
-

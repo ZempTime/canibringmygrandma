@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login]
 
   has_many :photos
+  has_many :votes
+  has_many :voted_photos, through: :votes, class_name: "Photo", foreign_key: "photo_id", source: :vote
 
   attr_accessor :login
 

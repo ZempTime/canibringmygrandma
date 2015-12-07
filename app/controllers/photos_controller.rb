@@ -3,6 +3,9 @@ class PhotosController < ApplicationController
 
   def show
     @photo = Photo.find(params[:id])
+    @photo.add_view!
+
+    @vote = set_vote
   end
 
   def new
@@ -23,5 +26,14 @@ class PhotosController < ApplicationController
   private
     def photo_params
       params.require(:photo).permit(:image, :user_id, :remove_image, :cached_image_data, :location)
+    end
+
+    def set_vote
+      vote = @photo.votes.where(user_id: current_user.id)
+      if vote.any?
+        vote.first
+      else
+        @photo.votes.new
+      end
     end
 end

@@ -1,10 +1,13 @@
 <div class="row">
-  <p class="text-center">Votes: <%= @photo.votes.count %></p>
   <div class="col-md-6">
     <h3 class="text-success text-left"><%= number_to_percentage(@photo.yes_percent, precision: 0) %></h3>
   </div>
   <div class="col-md-6">
     <h3 class="text-danger text-right"><%= number_to_percentage(@photo.no_percent, precision: 0) %></h3>
   </div>
+  <p class="text-center">Votes: <%= @photo.votes.count %></p>
   <p class="text-center">Your vote: <b><%= @vote.answer ? "Yes" : "No" %><b></p>
+  <div class="text-center">
+    <%= link_to "Next!", answer_photos_path, class: "btn btn-info btn-lg" %>
+  </div>
 </div>

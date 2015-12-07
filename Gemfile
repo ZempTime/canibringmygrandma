@@ -56,5 +56,5 @@ gem 'fastimage', '~> 1.8', '>= 1.8.1'
 gem 'mini_magick', '~> 4.3', '>= 4.3.6'
 gem 'image_processing', '~> 0.2.4'
 
-#gem 'administrate', '~> 0.1.1'
-#gem 'will_paginate', '~> 3.0', '>= 3.0.7'
+gem 'administrate', '~> 0.1.1'
+gem 'kaminari', '~> 0.16.3'

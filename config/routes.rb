@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations" }
+
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
       resources dashboard_resource
@@ -6,8 +9,6 @@ Rails.application.routes.draw do
 
     root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
   end
-
-  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations" }
 
   resources :photos do
     collection do

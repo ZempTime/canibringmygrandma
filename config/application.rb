@@ -22,5 +22,9 @@ module Canibringmygrandma
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.action_dispatch.default_headers = {
+      'Access-Control-Allow-Origin' => 'https://canibringmygrandma.s3-us-west-2.amazonaws.com/',
+      'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
+    }
   end
 end

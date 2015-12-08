@@ -10,10 +10,10 @@ class ImageUploader < Shrine
   plugin :validation_helpers
   plugin :versions, names: [:original, :thumb]
   plugin :cached_attachment_data
-  plugin :direct_upload, presign: true, max_size: 20*1024*1024
+  plugin :direct_upload, presign: true
 
   Attacher.validate do
-    validate_max_size 2.megabytes, message: 'is too large (max is 2 MB)'
+    validate_max_size 10.megabytes, message: 'is too large (max is 2 MB)'
     validate_mime_type_inclusion ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
   end
 

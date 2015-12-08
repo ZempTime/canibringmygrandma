@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!
+  before_filter :add_allow_credentials_headers
 
   def answer
     @photo = current_user.unvoted_photo
@@ -19,6 +20,7 @@ class PhotosController < ApplicationController
   end
 
   def create
+    puts params
     @photo = current_user.photos.new photo_params
     #@photo = Photo.new photo_params
 
@@ -26,6 +28,7 @@ class PhotosController < ApplicationController
       if @photo.save
         format.html { redirect_to @photo, notice: "Upload Successful...for the grandmas!" }
         format.js
+        format.json { byebug }
       else
         format.html { render :new, notice: "Problems with this upload" }
         format.js
@@ -45,5 +48,14 @@ class PhotosController < ApplicationController
       else
         @photo.votes.new
       end
+    end
+
+    def add_allow_credentials_headers
+      response.headers['Access-Control-Allow-Origin'] = request.headers['Origin'] || '*'
+      response.headers['Access-Control-Allow-Credentials'] = 'true'
+    end
+
+    def options
+      head :status => 200, :'Access-Control-Allow-Headers' => 'accept, content-type'
     end
 end

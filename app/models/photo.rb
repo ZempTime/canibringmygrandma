@@ -1,6 +1,6 @@
 class Photo < ActiveRecord::Base
   belongs_to :user
-  has_many :votes
+  has_many :votes, dependent: :destroy
   has_many :voting_users, through: :votes, class_name: "User", foreign_key: "user_id", source: :user
 
   include ImageUploader[:image]

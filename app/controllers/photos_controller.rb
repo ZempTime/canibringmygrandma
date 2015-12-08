@@ -20,18 +20,14 @@ class PhotosController < ApplicationController
   end
 
   def create
-    puts params
     @photo = current_user.photos.new photo_params
-    #@photo = Photo.new photo_params
 
     respond_to do |format|
+      byebug
       if @photo.save
         format.html { redirect_to @photo, notice: "Upload Successful...for the grandmas!" }
-        format.js
-        format.json { byebug }
       else
         format.html { render :new, notice: "Problems with this upload" }
-        format.js
       end
     end
   end

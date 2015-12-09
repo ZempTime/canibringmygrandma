@@ -23,7 +23,6 @@ class PhotosController < ApplicationController
     @photo = current_user.photos.new photo_params
 
     respond_to do |format|
-      byebug
       if @photo.save
         format.html { redirect_to @photo, notice: "Upload Successful...for the grandmas!" }
       else

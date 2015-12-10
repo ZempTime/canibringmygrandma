@@ -113,6 +113,9 @@ GEM
       warden (~> 1.2.3)
     down (1.0.4)
     erubis (2.7.0)
+    exception_notification (4.1.2)
+      actionmailer (~> 4.0)
+      activesupport (~> 4.0)
     execjs (2.6.0)
     fastimage (1.8.1)
       addressable (~> 2.3, >= 2.3.5)
@@ -259,6 +262,7 @@ DEPENDENCIES
   capistrano-rbenv!
   coffee-rails (~> 4.1.0)
   devise (~> 3.5, >= 3.5.2)
+  exception_notification (~> 4.1, >= 4.1.2)
   fastimage (~> 1.8, >= 1.8.1)
   font-awesome-rails (~> 4.5)
   image_processing (~> 0.2.4)

@@ -48,7 +48,7 @@ end
 
 
 gem 'bootstrap', '~> 4.0.0.alpha1'
-gem 'devise', '~> 3.5', '>= 3.5.2'
+gem 'devise', '~> 4.6', '>= 4.6.0'
 gem 'font-awesome-rails', '~> 4.5'
 
 gem 'shrine', '~> 1.0'

@@ -47,7 +47,7 @@ group :development do
 end
 
 
-gem 'bootstrap', '~> 4.0.0.alpha1'
+gem 'bootstrap', '~> 4.1.2.0'
 gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'font-awesome-rails', '~> 4.5'
 

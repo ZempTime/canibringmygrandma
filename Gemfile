@@ -53,7 +53,7 @@ gem 'font-awesome-rails', '~> 4.5'
 
 gem 'shrine', '~> 1.0'
 gem 'fastimage', '~> 1.8', '>= 1.8.1'
-gem 'mini_magick', '~> 4.3', '>= 4.3.6'
+gem 'mini_magick', '~> 4.9', '>= 4.9.4'
 gem 'image_processing', '~> 0.2.4'
 gem 'jquery-fileupload-rails', '~> 0.4.6'
 gem 'aws-sdk', '~> 2.2', '>= 2.2.4'

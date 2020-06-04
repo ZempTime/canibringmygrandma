@@ -58,8 +58,8 @@ gem 'image_processing', '~> 0.2.4'
 gem 'jquery-fileupload-rails', '~> 0.4.6'
 gem 'aws-sdk', '~> 2.2', '>= 2.2.4'
 
-gem 'administrate', '~> 0.1.1'
-gem 'kaminari', '~> 0.16.3'
+gem 'administrate', '~> 0.5.0'
+gem 'kaminari', '~> 1.2.1'
 gem 'roda', '~> 2.8'
 
 gem 'capistrano', '~> 3.4'

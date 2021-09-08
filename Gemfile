@@ -2,15 +2,15 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.0.3.5'
+gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0', '>= 5.0.8'
+gem 'sass-rails', '~> 5.0', '>= 5.0.4'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2.2'
+gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', '~> 0.12.2'
 
@@ -35,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.8.0'
 end
 
 group :development do
@@ -48,8 +48,8 @@ end
 
 
 gem 'bootstrap', '~> 4.0.0.alpha1'
-gem 'devise', '~> 4.7', '>= 4.7.0'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+gem 'devise', '~> 3.5', '>= 3.5.2'
+gem 'font-awesome-rails', '~> 4.5', '>= 4.5.0.0'
 
 gem 'shrine', '~> 1.0'
 gem 'fastimage', '~> 1.8', '>= 1.8.1'
@@ -58,7 +58,7 @@ gem 'image_processing', '~> 0.2.4'
 gem 'jquery-fileupload-rails', '~> 0.4.6'
 gem 'aws-sdk', '~> 2.2', '>= 2.2.4'
 
-gem 'administrate', '~> 0.6.0'
+gem 'administrate', '~> 0.1.1'
 gem 'kaminari', '~> 0.16.3'
 gem 'roda', '~> 2.8'
 
@@ -66,4 +66,4 @@ gem 'capistrano', '~> 3.4'
 gem 'capistrano-bundler', '~> 1.1', '>= 1.1.4'
 gem 'capistrano-rails', '~> 1.1', '>= 1.1.5'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
-gem 'exception_notification', '~> 4.4', '>= 4.4.0'
+gem 'exception_notification', '~> 4.1', '>= 4.1.2'

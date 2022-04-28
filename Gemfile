@@ -2,11 +2,11 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.0.3.5'
+gem 'rails', '5.2.7.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0', '>= 5.0.8'
+gem 'sass-rails', '~> 5.0', '>= 5.0.5'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -48,8 +48,8 @@ end
 
 
 gem 'bootstrap', '~> 4.0.0.alpha1'
-gem 'devise', '~> 4.7', '>= 4.7.0'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+gem 'devise', '~> 4.4', '>= 4.4.2'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 
 gem 'shrine', '~> 1.0'
 gem 'fastimage', '~> 1.8', '>= 1.8.1'
@@ -66,4 +66,4 @@ gem 'capistrano', '~> 3.4'
 gem 'capistrano-bundler', '~> 1.1', '>= 1.1.4'
 gem 'capistrano-rails', '~> 1.1', '>= 1.1.5'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
-gem 'exception_notification', '~> 4.4', '>= 4.4.0'
+gem 'exception_notification', '~> 4.2', '>= 4.2.0'

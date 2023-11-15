@@ -2,22 +2,22 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.0.3.5'
+gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0', '>= 5.0.8'
+gem 'sass-rails', '~> 5.0', '>= 5.0.5'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2.2'
+gem 'coffee-rails', '~> 4.1.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', '~> 0.12.2'
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '>= 4.0.5'
+gem 'jquery-rails', '>= 4.1.0'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '>= 2.5.3'
+gem 'turbolinks', '>= 2.5.4'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -40,7 +40,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.2', '>= 2.2.1'
+  gem 'web-console', '~> 2.3', '>= 2.3.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -48,22 +48,22 @@ end
 
 
 gem 'bootstrap', '~> 4.0.0.alpha1'
-gem 'devise', '~> 4.7', '>= 4.7.0'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+gem 'devise', '~> 3.5', '>= 3.5.3'
+gem 'font-awesome-rails', '~> 4.5', '>= 4.5.0.1'
 
 gem 'shrine', '~> 1.0'
 gem 'fastimage', '~> 1.8', '>= 1.8.1'
 gem 'mini_magick', '~> 4.3', '>= 4.3.6'
 gem 'image_processing', '~> 0.2.4'
-gem 'jquery-fileupload-rails', '~> 0.4.6'
+gem 'jquery-fileupload-rails', '~> 0.4.7'
 gem 'aws-sdk', '~> 2.2', '>= 2.2.4'
 
-gem 'administrate', '~> 0.6.0'
-gem 'kaminari', '~> 0.16.3'
+gem 'administrate', '~> 0.1.2'
+gem 'kaminari', '~> 0.17.0'
 gem 'roda', '~> 2.8'
 
 gem 'capistrano', '~> 3.4'
 gem 'capistrano-bundler', '~> 1.1', '>= 1.1.4'
 gem 'capistrano-rails', '~> 1.1', '>= 1.1.5'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
-gem 'exception_notification', '~> 4.4', '>= 4.4.0'
+gem 'exception_notification', '~> 4.1', '>= 4.1.3'

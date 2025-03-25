@@ -2,11 +2,11 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.0.3.5'
+gem 'rails', '7.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0', '>= 5.0.8'
+gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -17,7 +17,7 @@ gem 'therubyracer', '~> 0.12.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '>= 4.0.5'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '>= 2.5.3'
+gem 'turbolinks', '>= 5.0.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -40,7 +40,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.2', '>= 2.2.1'
+  gem 'web-console', '~> 3.0', '>= 3.0.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -58,12 +58,12 @@ gem 'image_processing', '~> 0.2.4'
 gem 'jquery-fileupload-rails', '~> 0.4.6'
 gem 'aws-sdk', '~> 2.2', '>= 2.2.4'
 
-gem 'administrate', '~> 0.6.0'
-gem 'kaminari', '~> 0.16.3'
+gem 'administrate', '~> 0.18.0'
+gem 'kaminari', '~> 1.0.0'
 gem 'roda', '~> 2.8'
 
 gem 'capistrano', '~> 3.4'
 gem 'capistrano-bundler', '~> 1.1', '>= 1.1.4'
 gem 'capistrano-rails', '~> 1.1', '>= 1.1.5'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
-gem 'exception_notification', '~> 4.4', '>= 4.4.0'
+gem 'exception_notification', '~> 5.0', '>= 5.0.0'
